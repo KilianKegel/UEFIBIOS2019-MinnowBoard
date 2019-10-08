@@ -79,7 +79,17 @@ NOTE: Visual Studio is here only used for editing the project. The build process
 ### launch the build environment
 * run `launch.bat`
 
-
+## Related Projects
+| related project|annotation|
+|:-|:-|
+|[Torito C Library](https://github.com/KilianKegel/torito-C-Library#torito-c-library)|C Library for UEFI Shell only. All projects below are built on or derived from *Torito C Library*|
+|[Visual ANSI C for UEFI Shell](https://github.com/KilianKegel/Visual-ANSI-C-for-UEFI-Shell#visual-ansi-c-for-uefi-shell)|Visual Studio for UEFI Shell for beginners.|
+|[Visual DOS Tools for UEFI Shell](https://github.com/KilianKegel/Visual-DOS-Tools-for-UEFI-Shell#visual-dos-tools-for-uefi-shell)|more command implementation|
+|[Visual HWTools for UEFI Shell](https://github.com/KilianKegel/Visual-HWTools-for-UEFI-Shell#visual-hwtools-for-uefi-shell)|HWTools: PCI- and GPIOSpy for Baytrail. MemSpy for all.|
+|[UDK2018-Minnowboard](https://github.com/KilianKegel/UDK2018-MinnowBoard#udk2018-minnowboard--cdepkg)|Gets the MinnowBoard running with  the latest released EDK sourcecode and demonstrates *CdePkg* on real hardware|
+|[CdePkg](https://github.com/KilianKegel/CdePkg#cdepkg)|*Torito C Library* redone for UEFI POST usage|
+|[CdeValidationPkg](https://github.com/KilianKegel/CdeValidationPkg#cdevalidationpkg)|Unit tests for *CdePkg*|
+|[MinnowBoard](https://minnowboard.org/)|Official MinnowBoard web presence|
 ## Revision History
 ### 20191006 initial version
 * MinnowBoard build RELEASE and DEBUG ok
