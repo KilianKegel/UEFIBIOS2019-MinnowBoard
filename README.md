@@ -75,6 +75,12 @@ NOTE: Visual Studio is here only used for editing the project. The build process
 ### launch the build environment
 * run `launch.bat`
 
+### build the project
+* run `build -a IA32 -a X64 -n 5 -t VS2015x86 -b DEBUG -p Vlv2TbltDevicePkg\PlatformPkgX64.dsc` to build the
+  MinnowBoard BIOS
+* run `build -p EmulatorPkg\EmulatorPkg.dsc -t VS2017 -a IA32` to build the
+  *EmulationPkg* BIOS
+
 ## Related Projects
 | related project|annotation|
 |:-|:-|
