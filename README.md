@@ -45,11 +45,14 @@ The MinnowBoard is the only free available hardware/PC platform to get UEFI Tian
 	the [**_CdeValidationPkg_**](https://github.com/KilianKegel/CdeValidationPkg#cdevalidationpkg) to the
 	UEFI/Tianocore open source community.**
 
-2. get the MinnowBoard and the EDK2 Emulation (Nt32Pkg) running with the latest released UDK2018 and the latest Visual Studio VS2019 build environment
-3. use OpenSSL_1_1_0-stable in the component CryptoPkg\Library\OpensslLib
+2. get the MinnowBoard and the EDK2 Emulation (EmulationPkg) running with the latest source code base at EDK2 and the latest Visual Studio VS2019 build environment
 
 
-**CdePkg** is considered an improvement over traditional UEFI BIOS development, since it introduces
+**CdePkg** is considered an improvement over traditional UEFI BIOS development, since the presence 
+of a standardized interface (as the ANSI C library is) could ease
+open source (firmware-) projects over projects with proprietary interfaces only.
+Particularly it introduces:
+
 * stable, precise, chipset (ACPI timer) independent C library conform [`clock()`](https://docs.microsoft.com/en-us/cpp/c-runtime-library/reference/clock?view=vs-2019) for POST and UEFI Shell in millisecond resolution
 * unlimited (buffer less) [`printf()`](https://docs.microsoft.com/en-us/cpp/c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l?view=vs-2019)-family and [`scanf()`](https://docs.microsoft.com/en-us/cpp/c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l?view=vs-2019)-family implementation
 * Standard C conform format specifiers for [`printf()`](https://docs.microsoft.com/en-us/cpp/c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l?view=vs-2019)-family and [`scanf()`](https://docs.microsoft.com/en-us/cpp/c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l?view=vs-2019)-family
@@ -61,6 +64,22 @@ to provide a Standard C interface for any "C"-(open)source-based extention.
 
 NOTE: Visual Studio is here only used for editing the project. The build process is still pure EDK!
       (the startup error message of VS2017/VS2019 can be ignored)
+      
+## HowTo install/build/Edit
+### Installation
+1. install a build machine according to https://github.com/KilianKegel/HowTo-setup-an-UEFI-Development-PC#howto-setup-an-uefi-development-pc
+2. make sure that Python 3.7.4 is installed and added to the search path 
+   Note: <br>
+   a) Python 2.7 won't work anymore <br>
+   b) Python 3.7.4 shall be installed from https://www.python.org/ftp/python/3.7.4/python-3.7.4-amd64.exe <br>
+   c) Python 3.7.4 installed from Microsoft AppStore can not be de-installed again <br>
+### download the sourcecode
+* `git clone --recursive https://github.com/KilianKegel/UEFIBIOS2019-MinnowBoard.git`
+
+### launch the build environment
+* run `launch.bat`
+
+
 ## Revision History
 ### 20191006 initial version
 * MinnowBoard build RELEASE and DEBUG ok
